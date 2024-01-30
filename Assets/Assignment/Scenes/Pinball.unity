@@ -294,6 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137648955}
   - component: {fileID: 137648954}
+  - component: {fileID: 137648956}
   m_Layer: 0
   m_Name: Dropper
   m_TagString: Untagged
@@ -369,6 +370,21 @@ Transform:
   - {fileID: 59850194}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &137648956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137648953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a897e24d65d10954c8a65facbfae2847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  pinball: {fileID: 861898143521495934, guid: a4c8c53d1b831fc48b541998a3bfba59, type: 3}
+  spawn: {fileID: 59850194}
 --- !u!1 &201990728
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578126701}
   - component: {fileID: 578126700}
+  - component: {fileID: 578126702}
   m_Layer: 0
   m_Name: New Ball Trigger
   m_TagString: Untagged
@@ -616,6 +633,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &578126702
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578126699}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.49999997
 --- !u!1 &650987579
 GameObject:
   m_ObjectHideFlags: 0
