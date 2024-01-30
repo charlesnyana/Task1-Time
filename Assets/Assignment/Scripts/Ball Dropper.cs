@@ -11,7 +11,7 @@ public class BallDropper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instantiate(pinball, spawn.position, spawn.rotation);
     }
 
     // Update is called once per frame
@@ -20,9 +20,14 @@ public class BallDropper : MonoBehaviour
         float direction = Input.GetAxis("Horizontal");
         transform.Translate(1 * direction * Time.deltaTime, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (pinball.activeInHierarchy == false)
         {
-            Instantiate(pinball, spawn.position, spawn.rotation);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Instantiate(pinball, spawn.position, spawn.rotation);
+            }
+        } else {
+            Debug.Log("You may not drop a ball.");
         }
     }
 }
