@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 6765834100001997015}
   - component: {fileID: 6956698221861797480}
   - component: {fileID: 5092354480321516497}
+<<<<<<< HEAD
   - component: {fileID: 5082378251681253986}
   - component: {fileID: 8323142247495427088}
+=======
+>>>>>>> 906389b5000566e40c06c5c11ddde50e2c1cafed
   m_Layer: 0
   m_Name: pinball
   m_TagString: Untagged
@@ -114,6 +117,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
 --- !u!114 &5082378251681253986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,3 +165,5 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+=======
+>>>>>>> 906389b5000566e40c06c5c11ddde50e2c1cafed
