@@ -1,36 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Paddles : MonoBehaviour
 {
+    public float speed = 2f;
+    public float amp = 2f;
     public float angle = 45f;
     public GameObject leftPivot;
     public GameObject rightPivot;
+    float baseSpeed;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        baseSpeed = speed;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector3 paddleUp = new Vector3(0, 0, angle); // fixed rotation transformation for paddles
         if (Input.GetKey(KeyCode.Space))
         {
             Debug.Log("Paddles UP!");
-
-            leftPivot.transform.eulerAngles = paddleUp * -1; //https://docs.unity3d.com/ScriptReference/Transform-eulerAngles.html
-            rightPivot.transform.eulerAngles = paddleUp;
+            
+            if (angle >= speed)
+            {
+                leftPivot.transform.localRotation = Quaternion.Euler(0, 0, -speed);
+                rightPivot.transform.localRotation = Quaternion.Euler(0, 0, speed);
+                speed = speed * amp;
+            }
         }
         else {
-            Debug.Log("Paddles DOWN!");
-
-            leftPivot.transform.eulerAngles = Vector3.zero;
-            rightPivot.transform.eulerAngles = Vector3.zero;
+            leftPivot.transform.eulerAngles = Vector2.zero; //https://docs.unity3d.com/ScriptReference/Transform-eulerAngles.html
+            rightPivot.transform.eulerAngles = Vector2.zero;
+            speed = baseSpeed;
         }
     }
 }
