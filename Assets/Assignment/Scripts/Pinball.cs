@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pinball : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,6 @@ public class Pinball : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Destroy(gameObject);
+
     }
 }
