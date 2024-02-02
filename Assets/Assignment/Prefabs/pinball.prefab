@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2499041337091713028}
   - component: {fileID: 4572984664081822202}
   - component: {fileID: 1161640242784746986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pinball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,8 +113,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0.3
+  m_GravityScale: 0.91
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
